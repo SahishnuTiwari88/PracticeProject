@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans.xsd"> 
+ <bean name="product1" class="prodinfo.Product" autowire-candidate="false">
+ <property name="prodid" value="101"></property>
+ <property name="prodname" value="Amul Cool"></property>
+ 
+ </bean>
+ <bean name="product2" class="prodinfo.Product">
+ <property name="prodid" value="102"></property>
+ <property name="prodname" value="Mother Dairy"></property>
+ 
+ </bean>
+ <bean name="customer" class="prodinfo.Customer" autowire="byType">
+  <property name="Custname" value="Shri Ram"></property> 
+ <!-- <property name="product" ref="mesg1"></property>-->
+ 
+<!--  <customer-arg index="0" value -->
+ </bean>
+ 
+ </beans>
